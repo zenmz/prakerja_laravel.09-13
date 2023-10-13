@@ -3,11 +3,15 @@
     <h1>Upload File</h1>
     <form action="{{ route('upload.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="form-group">
-            <label>Pilih Gambar</label>
-            <input type="file" class="form-control-file" name="image">
+        <div class="d-flex">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Pilih Gambar</label>
+                <input type="file" class="form-control-file" name="image">
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-success">Submit</button>
+            </div>
         </div>
-        <button class="btn btn-success">Simpan</button>
     </form>
 
     <table class="table">
